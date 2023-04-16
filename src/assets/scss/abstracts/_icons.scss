@@ -1,0 +1,59 @@
+@use "../abstracts" as *;
+
+[class*=" icofont-"],
+[class^=icofont-] {
+  white-space: normal;
+}
+
+.benefits i {
+ color: $color-primary-darker;
+  font-size: 2.5rem;
+  padding: .5rem;
+  @media (min-width: 768px){
+    font-size: 3rem;
+  }
+  @media (min-width: 992px){
+    font-size: 3.5rem;
+    padding: 1.5rem;
+  }
+
+  &.cz {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    border: 2px solid $color-primary-darker;
+    border-radius: 50%;
+    padding: .5rem;
+    margin: 0 0 1rem 0;
+
+      @media (min-width: 992px){
+        margin: 1.5rem 1rem 1rem;
+
+      }
+  }
+}
+
+.other-services i {
+  font-size: 3.5rem;
+  padding: 1.5rem;
+  @media (min-width: 768px){
+    font-size: 4.7rem;
+  }
+  @media (min-width: 992px){
+    font-size: 6.9rem;
+  }
+}
+
+.other-services p {
+  margin-top: 1rem;
+}
+
+.icofont-rounded-expand {
+  font-size: 1.25rem;
+  display: inline-block;
+}
+
+.icofont-simple-down {
+  font-size: 2rem;
+  color: var(--color-primary-darker);
+}

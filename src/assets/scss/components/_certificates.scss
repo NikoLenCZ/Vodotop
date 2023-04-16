@@ -1,0 +1,20 @@
+@use "../abstracts" as *;
+
+.certificate-item {
+  display: flex;
+  max-width: 50rem;
+  flex-direction: column;
+  border-radius: 3px;
+  box-shadow: 0 1px 20px 7px rgba(0, 0, 0, .1);
+}
+
+.img-box {
+  display: flex;
+  justify-content: center;
+}
+
+.certificate-text {
+  padding: 1rem;
+  background-color: white;
+  flex-grow: 1;
+}

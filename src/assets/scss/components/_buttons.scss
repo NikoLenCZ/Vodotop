@@ -1,0 +1,130 @@
+@use "../abstracts" as *;
+
+.btn {
+  max-width: fit-content;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 1rem;
+  min-width: 5rem;
+  display: grid;
+  place-items: center;
+  line-height: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid $color-primary;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px rgb(0 0 0 / 30%);
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 3px 3px 5px rgb(0 0 0 / 30%);
+  }
+
+  @media (min-width: 768px) {
+    line-height: 1.3rem;
+    min-width: 5rem;
+  }
+
+  @media (min-width: 992px) {
+    // min-width: 7rem;
+    // padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  @media (min-width: 1200px) {
+    min-width: 7rem;
+    padding: 1.1rem;
+    font-size: 1.2rem;
+  }
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary-darker);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: #fff;
+    background-color: var(--color-primary-bright);
+    border-color: var(--color-primary-darker);
+  }
+}
+
+
+.btn-secondary {
+  color: $color-primary-darker;
+  background-color: var(--color-primary-lighten);
+  border-color: var(--color-primary-darker);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: var(--color-light);
+    border-color: var(--color-primary-bright);
+  }
+}
+
+.btn-third {
+  color: var(--color-secondary);
+  background-color: white;
+  border-color: var(--color-primary-darker);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: var(--color-primary-lighten);
+    border-color: var(--color-primary-bright);
+  }
+}
+
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+
+  @media (min-width: 992px) {
+    justify-content: start;
+  }
+}
+
+.arrow-links {
+  width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link-arrow {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-primary-darker);
+  max-width: 9rem;
+  padding: 1rem;
+
+  &.next {
+    text-align: end;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    max-width: 100%;
+  }
+}
+
+.link-arrow:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary-bright);
+}

@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+footer {
+  background-color: $color-primary;
+  color: #fff;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 400;
+  text-align: center;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.icofont-fire-burn {
+  transition: color 0.1s ease;
+}
+
+.nikolen,
+.nikolen a {
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: orange;
+  }
+}

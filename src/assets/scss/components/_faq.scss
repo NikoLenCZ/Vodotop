@@ -1,0 +1,89 @@
+@use "../abstracts" as *;
+
+section#FAQ {
+  padding-inline: 1rem;
+  padding-bottom: 2rem;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 3rem;
+  }
+}
+
+.faq-section .text-large {
+  padding-bottom: 0;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 2rem;
+  }
+}
+
+.faq {
+  max-width: 65rem;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: .15rem solid var(--color-primary-darker);
+
+  @media screen and (min-width: 768px) {
+    margin-top: 2rem;
+  }
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.question h3 {
+  margin: 0;
+  padding-block: 1rem;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.3s ease;
+}
+
+.faq.active {
+  .answer {
+    max-height: 19rem;
+    animation: fade 1s ease-in-out;
+  }
+
+  i {
+    display: inline-block;
+    transform: rotate(180deg);
+  }
+}
+
+i {
+  transition: all 0.5s ease-in;
+}
+
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-0.625rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// GREEN BACKGROUND FILL SECTION
+
+#FAQ {
+  background-color: rgba($color-primary, .1);
+}
+
+.faq-fill-bg {
+  box-shadow: 0 0 0 100vmax rgba($color-primary, .1);
+  clip-path: inset(0 -100vmax);
+}
+
+// /GREEN BACKGROUND FILL SECTION
